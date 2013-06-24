@@ -7,8 +7,8 @@ if [ -z "$1" ]; then
 fi
 
 echo ""
-echo $line' add files (*.xcscheme *.h *.m *.xib *.strings *.plist *.png *.jpg *.txt *.sh *.pbxproj *.proto *.zip)  '$line
-git add *.c *.pb *.xcscheme *.proto *.h *.m *.xib *.strings *.plist *.png *.jpg *.txt *.sh *.pbxproj *.zip .gitignore
+echo $line' add files (*.py *.sql *.zip)  '$line
+git add *.jpg *.txt *.sh *.zip .gitignore *.sql *.py
 echo ''
 
 echo $line' auto checkout unuse files (*xcbkptlist *xcuserstate *DS_Store)  '$line
