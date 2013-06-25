@@ -8,7 +8,10 @@ fi
 
 echo ""
 echo $line' add files (*.py *.sql *.zip)  '$line
-git add *.jpg *.txt *.sh *.zip .gitignore *.sql *.py
+git add *.jpg *.txt *.sh *.png
+git add *.zip .gitignore 
+git add *.sql *.py
+git add commit.sh
 echo ''
 
 echo $line' auto checkout unuse files (*xcbkptlist *xcuserstate *DS_Store)  '$line
