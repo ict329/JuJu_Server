@@ -7,9 +7,18 @@ class MGEngine:
         dbname = MONGO_CONFIG['DB']
         self.db = self.client[dbname]
     
-    def findone(self):
-        one = self.db.test.find_one()
-        print one
+
+    """
+    tablename string
+    condition dictionary
+    order dictionary
+    returnfields range
+    offset int
+    limit int
+    multiple boolean
+
+
+    """
 
     def find(self,tablename,condition,order,returnfileds,offset,limit):
         return None
