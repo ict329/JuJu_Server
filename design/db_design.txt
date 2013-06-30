@@ -4,6 +4,7 @@ Common Document
 
 
 location(Document)
+    contury_code
     province
     city
     latitude
@@ -17,12 +18,16 @@ comment(Document)
     star //多少星
     create_date
     is_reply//也可以是回复
-    comment_id //如果是回复的话，这个指向它回复的id
+    reply_id//如果是回复的话，这个指向它回复的id
 
 
 Contact(Document)
-    tel
-    qq
+    tel_number
+    qq_number;
+    sina_nick
+    weixin_id
+    
+
 
 
 

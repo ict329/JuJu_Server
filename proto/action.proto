@@ -1,0 +1,30 @@
+import "basic.proto";
+
+
+message Album{
+    required string album_id = 1;
+    required string uid = 2;
+    optional string name = 3;
+    repeated string image_list = 4; 
+}
+
+enum PBActivityType{
+    PARTY = 1;
+    TRAFFIC = 2;
+    SHOPPING = 3;
+}
+
+message PBActivity{
+   required PBActivityType type = 1;
+   required int32 c_date = 2;
+   optional PBLocation location = 3;
+   optional PBContact contact = 4;
+   optional int32 join_timeline = 5;
+   optional int32 hold_time = 6;
+
+   //count
+   optional int32 comment_count = 20;
+   optional int32 share_count = 21;
+   optional int32 interested_count = 22;
+   optional int32 participant_count = 23;
+}
