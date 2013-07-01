@@ -45,4 +45,3 @@ delete
 """
 
 engine = MGEngine()
-engine.findone()
