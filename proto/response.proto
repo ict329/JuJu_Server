@@ -1,6 +1,7 @@
 import "basic.proto";
 import "user.proto";
 import "action.proto";
+import "message.proto";
 
 
 message PBResponse
@@ -9,4 +10,5 @@ message PBResponse
     repeated PBComment comment = 2;
     repeated PBUserBasic user = 3;
     repeated PBAction action = 4;
+    repeated PBMessage message = 5;
 }

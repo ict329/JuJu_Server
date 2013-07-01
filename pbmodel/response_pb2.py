@@ -10,11 +10,12 @@ from google.protobuf import descriptor_pb2
 import basic_pb2
 import user_pb2
 import action_pb2
+import message_pb2
 
 DESCRIPTOR = descriptor.FileDescriptor(
   name='response.proto',
   package='',
-  serialized_pb='\n\x0eresponse.proto\x1a\x0b\x62\x61sic.proto\x1a\nuser.proto\x1a\x0c\x61\x63tion.proto\"\x7f\n\nPBResponse\x12\x1d\n\x08\x61\x63tivity\x18\x01 \x03(\x0b\x32\x0b.PBActivity\x12\x1b\n\x07\x63omment\x18\x02 \x03(\x0b\x32\n.PBComment\x12\x1a\n\x04user\x18\x03 \x03(\x0b\x32\x0c.PBUserBasic\x12\x19\n\x06\x61\x63tion\x18\x04 \x03(\x0b\x32\t.PBAction')
+  serialized_pb='\n\x0eresponse.proto\x1a\x0b\x62\x61sic.proto\x1a\nuser.proto\x1a\x0c\x61\x63tion.proto\x1a\rmessage.proto\"\x9c\x01\n\nPBResponse\x12\x1d\n\x08\x61\x63tivity\x18\x01 \x03(\x0b\x32\x0b.PBActivity\x12\x1b\n\x07\x63omment\x18\x02 \x03(\x0b\x32\n.PBComment\x12\x1a\n\x04user\x18\x03 \x03(\x0b\x32\x0c.PBUserBasic\x12\x19\n\x06\x61\x63tion\x18\x04 \x03(\x0b\x32\t.PBAction\x12\x1b\n\x07message\x18\x05 \x03(\x0b\x32\n.PBMessage')
 
 
 
@@ -54,6 +55,13 @@ _PBRESPONSE = descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    descriptor.FieldDescriptor(
+      name='message', full_name='PBResponse.message', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -63,14 +71,15 @@ _PBRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=57,
-  serialized_end=184,
+  serialized_start=73,
+  serialized_end=229,
 )
 
 _PBRESPONSE.fields_by_name['activity'].message_type = action_pb2._PBACTIVITY
 _PBRESPONSE.fields_by_name['comment'].message_type = action_pb2._PBCOMMENT
 _PBRESPONSE.fields_by_name['user'].message_type = user_pb2._PBUSERBASIC
 _PBRESPONSE.fields_by_name['action'].message_type = action_pb2._PBACTION
+_PBRESPONSE.fields_by_name['message'].message_type = message_pb2._PBMESSAGE
 DESCRIPTOR.message_types_by_name['PBResponse'] = _PBRESPONSE
 
 class PBResponse(message.Message):

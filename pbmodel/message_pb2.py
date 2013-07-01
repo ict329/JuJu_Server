@@ -12,7 +12,7 @@ import basic_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='message.proto',
   package='',
-  serialized_pb='\n\rmessage.proto\x1a\x0b\x62\x61sic.proto\"\xb5\x01\n\tPBMessage\x12\x12\n\nmessage_id\x18\x01 \x02(\t\x12\x10\n\x08\x66rom_uid\x18\x02 \x02(\t\x12\x0e\n\x06to_uid\x18\x03 \x02(\t\x12\x1c\n\x04type\x18\x04 \x02(\x0e\x32\x0e.PBMessageType\x12 \n\x06status\x18\x05 \x02(\x0e\x32\x10.PBMessageStatus\x12\x0c\n\x04text\x18\n \x01(\t\x12\x11\n\timage_url\x18\x0b \x01(\t\x12\x11\n\tsound_url\x18\x0c \x01(\t*/\n\rPBMessageType\x12\x08\n\x04TEXT\x10\x01\x12\t\n\x05IMAGE\x10\x02\x12\t\n\x05SOUND\x10\x03*K\n\x0fPBMessageStatus\x12\n\n\x06UNREAD\x10\x01\x12\x08\n\x04READ\x10\x02\x12\x0b\n\x07SENDING\x10\x03\x12\x08\n\x04SENT\x10\x04\x12\x0b\n\x07\x44\x45LETED\x10\x05')
+  serialized_pb='\n\rmessage.proto\x1a\x0b\x62\x61sic.proto\"\xb5\x01\n\tPBMessage\x12\x12\n\nmessage_id\x18\x01 \x02(\t\x12\x10\n\x08\x66rom_uid\x18\x02 \x02(\t\x12\x0e\n\x06to_uid\x18\x03 \x02(\t\x12\x1c\n\x04type\x18\x04 \x02(\x0e\x32\x0e.PBMessageType\x12 \n\x06status\x18\x05 \x02(\x0e\x32\x10.PBMessageStatus\x12\x0c\n\x04text\x18\n \x01(\t\x12\x11\n\timage_url\x18\x0b \x01(\t\x12\x11\n\tsound_url\x18\x0c \x01(\t*/\n\rPBMessageType\x12\x08\n\x04TEXT\x10\x01\x12\t\n\x05IMAGE\x10\x02\x12\t\n\x05SOUND\x10\x03*>\n\x0fPBMessageStatus\x12\n\n\x06UNREAD\x10\x01\x12\x08\n\x04READ\x10\x02\x12\x0b\n\x07SENDING\x10\x03\x12\x08\n\x04SENT\x10\x04')
 
 _PBMESSAGETYPE = descriptor.EnumDescriptor(
   name='PBMessageType',
@@ -62,15 +62,11 @@ _PBMESSAGESTATUS = descriptor.EnumDescriptor(
       name='SENT', index=3, number=4,
       options=None,
       type=None),
-    descriptor.EnumValueDescriptor(
-      name='DELETED', index=4, number=5,
-      options=None,
-      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=263,
-  serialized_end=338,
+  serialized_end=325,
 )
 
 
@@ -81,7 +77,6 @@ UNREAD = 1
 READ = 2
 SENDING = 3
 SENT = 4
-DELETED = 5
 
 
 

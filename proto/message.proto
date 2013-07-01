@@ -12,7 +12,6 @@ enum PBMessageStatus{
     READ = 2;
     SENDING = 3;
     SENT = 4;
-    DELETED = 5;
 }
 
 message PBMessage{
