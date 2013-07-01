@@ -1,4 +1,4 @@
-
+import "basic.proto";
 enum PBRelation
 {
     FOLLOW = 1;
@@ -29,23 +29,6 @@ enum PBUserStatus{
     HIDDEN = 3;
 }
 
-
-message PBLocation{
-    required int32 contury_code = 1;
-    required string province = 2;
-    required string city = 3;
-    optional float latitude = 4;
-    optional float longitude = 5;
-}
-
-
-//May be useless
-message PBContact {
-    optional string tel_number = 1;
-    optional string qq_number= 2;
-    optional string sina_nick = 3;
-    optional string weixin_id = 4;
-}
 
 message PBSNS{
     optional string tel_number = 1;

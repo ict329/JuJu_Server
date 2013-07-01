@@ -1,4 +1,6 @@
+import "basic.proto";
 import "user.proto";
+
 
 //enum 
 enum PBActivityType{
