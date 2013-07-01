@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DST_DIR=../pbmodel
+DST_DIR=../src/pbmodel
 SRC_DIR=../proto
 
 
