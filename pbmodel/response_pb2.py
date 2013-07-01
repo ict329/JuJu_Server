@@ -3,63 +3,80 @@
 from google.protobuf import descriptor
 from google.protobuf import message
 from google.protobuf import reflection
-from google.protobuf import service
-from google.protobuf import service_reflection
 from google.protobuf import descriptor_pb2
+# @@protoc_insertion_point(imports)
+
+
+import basic_pb2
+import user_pb2
+import action_pb2
+
+DESCRIPTOR = descriptor.FileDescriptor(
+  name='response.proto',
+  package='',
+  serialized_pb='\n\x0eresponse.proto\x1a\x0b\x62\x61sic.proto\x1a\nuser.proto\x1a\x0c\x61\x63tion.proto\"\x7f\n\nPBResponse\x12\x1d\n\x08\x61\x63tivity\x18\x01 \x03(\x0b\x32\x0b.PBActivity\x12\x1b\n\x07\x63omment\x18\x02 \x03(\x0b\x32\n.PBComment\x12\x1a\n\x04user\x18\x03 \x03(\x0b\x32\x0c.PBUserBasic\x12\x19\n\x06\x61\x63tion\x18\x04 \x03(\x0b\x32\t.PBAction')
+
 
 
 
 _PBRESPONSE = descriptor.Descriptor(
   name='PBResponse',
   full_name='PBResponse',
-  filename='response.proto',
+  filename=None,
+  file=DESCRIPTOR,
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
       name='activity', full_name='PBResponse.activity', index=0,
       number=1, type=11, cpp_type=10, label=3,
-      default_value=[],
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='comment', full_name='PBResponse.comment', index=1,
       number=2, type=11, cpp_type=10, label=3,
-      default_value=[],
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='user', full_name='PBResponse.user', index=2,
       number=3, type=11, cpp_type=10, label=3,
-      default_value=[],
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='action', full_name='PBResponse.action', index=3,
       number=4, type=11, cpp_type=10, label=3,
-      default_value=[],
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[],  # TODO(robinson): Implement.
+  nested_types=[],
   enum_types=[
   ],
-  options=None)
-
-import user_pb2
-import action_pb2
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=57,
+  serialized_end=184,
+)
 
 _PBRESPONSE.fields_by_name['activity'].message_type = action_pb2._PBACTIVITY
 _PBRESPONSE.fields_by_name['comment'].message_type = action_pb2._PBCOMMENT
 _PBRESPONSE.fields_by_name['user'].message_type = user_pb2._PBUSERBASIC
 _PBRESPONSE.fields_by_name['action'].message_type = action_pb2._PBACTION
+DESCRIPTOR.message_types_by_name['PBResponse'] = _PBRESPONSE
 
 class PBResponse(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _PBRESPONSE
+  
+  # @@protoc_insertion_point(class_scope:PBResponse)
 
+# @@protoc_insertion_point(module_scope)

@@ -1,3 +1,4 @@
+import "basic.proto";
 import "user.proto";
 import "action.proto";
 
