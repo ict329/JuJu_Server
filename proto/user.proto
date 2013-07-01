@@ -1,4 +1,35 @@
 
+enum PBRelation
+{
+    FOLLOW = 1;
+    FAN = 2;
+    FRIEND = 3;
+    BLACK = 4;
+}
+
+
+enum PBRegType{
+    NICK = 1;
+    QQ = 3;
+    RENREN = 4;
+    EMAIL = 5;
+}
+
+enum PBUserRole{
+    USER = 1;
+    AMDIN = 2;
+    VIP = 3;
+    FORBIDDEN = 4;
+}
+
+
+enum PBUserStatus{
+    OFFLINE = 1;
+    ONLINE = 2;
+    HIDDEN = 3;
+}
+
+
 message PBLocation{
     required int32 contury_code = 1;
     required string province = 2;
@@ -35,13 +66,6 @@ message PBLog{
 }
 
 
-enum PBRegType{
-    NICK = 1;
-    QQ = 3;
-    RENREN = 4;
-    EMAIL = 5;
-}
-
 message PBRegistion
 {
     required int32 reg_date = 1; 
@@ -74,19 +98,6 @@ message PBStatistic{
 }
 
 
-enum PBUserRole{
-    USER = 1;
-    AMDIN = 2;
-    BLACK = 3;
-}
-
-
-enum PBUserStatus{
-    OFFLINE = 1;
-    ONLINE = 2;
-    HIDDEN = 3;
-}
-
 message PBUserBasic{
     required string uid = 1;
     required string nick = 2;
@@ -96,6 +107,11 @@ message PBUserBasic{
     optional PBUserStatus status = 6[default=OFFLINE];
     optional string introduction = 7;
     optional int32 birth_date= 8;
+
+    //for return not for store
+    optional int32 PBRelation = 20;
+    optional string note_name = 21;
+
 }
 
 

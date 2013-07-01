@@ -1,0 +1,11 @@
+import "user.proto";
+import "action.proto";
+
+
+message PBResponse
+{
+    repeated PBActivity activity = 1;
+    repeated PBComment comment = 2;
+    repeated PBUserBasic user = 3;
+    repeated PBAction action = 4;
+}

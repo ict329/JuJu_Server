@@ -3,22 +3,13 @@
 from google.protobuf import descriptor
 from google.protobuf import message
 from google.protobuf import reflection
+from google.protobuf import service
+from google.protobuf import service_reflection
 from google.protobuf import descriptor_pb2
-# @@protoc_insertion_point(imports)
-
-
-import basic_pb2
-
-DESCRIPTOR = descriptor.FileDescriptor(
-  name='action.proto',
-  package='',
-  serialized_pb='\n\x0c\x61\x63tion.proto\x1a\x0b\x62\x61sic.proto\"H\n\x05\x41lbum\x12\x10\n\x08\x61lbum_id\x18\x01 \x02(\t\x12\x0b\n\x03uid\x18\x02 \x02(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x12\n\nimage_list\x18\x04 \x03(\t\"\xa2\x01\n\tPBComment\x12\x12\n\ncomment_id\x18\x01 \x02(\t\x12\x11\n\tstring_id\x18\x02 \x02(\t\x12\x0b\n\x03uid\x18\x03 \x02(\t\x12\x0e\n\x06\x63_date\x18\x04 \x02(\x05\x12\x0f\n\x07\x63ontent\x18\x05 \x01(\t\x12\x0c\n\x04star\x18\x06 \x01(\x05\x12\x10\n\x08is_reply\x18\x07 \x01(\x08\x12\x10\n\x08reply_id\x18\x08 \x01(\t\x12\x0e\n\x06\x64igest\x18\t \x01(\t\"D\n\x0bPBPromotion\x12\x12\n\nstart_date\x18\x01 \x02(\x05\x12\x10\n\x08\x65nd_date\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ontent\x18\x03 \x02(\t\"\x98\x01\n\nPBMerchant\x12\x13\n\x0bmerchant_id\x18\x01 \x02(\t\x12\x0f\n\x04type\x18\x02 \x01(\x05:\x01\x30\x12\x11\n\taibang_id\x18\x03 \x01(\t\x12\x1d\n\x08location\x18\x04 \x01(\x0b\x32\x0b.PBLocation\x12\x10\n\x08tel_list\x18\x05 \x03(\t\x12 \n\npromotions\x18\x06 \x03(\x0b\x32\x0c.PBPromotion\"\xea\x06\n\nPBActivity\x12\x1d\n\x04type\x18\x01 \x02(\x0e\x32\x0f.PBActivityType\x12\x0e\n\x06\x63_date\x18\x02 \x02(\x05\x12\x0b\n\x03uid\x18\x03 \x02(\t\x12\"\n\x05party\x18\n \x01(\x0b\x32\x13.PBActivity.PBParty\x12&\n\x07traffic\x18\x0b \x01(\x0b\x32\x15.PBActivity.PBTraffic\x12(\n\x08shopping\x18\x0c \x01(\x0b\x32\x16.PBActivity.PBShopping\x12\x15\n\rcomment_count\x18\x32 \x01(\x05\x12\x13\n\x0bshare_count\x18\x33 \x01(\x05\x12\x18\n\x10interested_count\x18\x34 \x01(\x05\x12\x19\n\x11participant_count\x18\x35 \x01(\x05\x1a\xc9\x01\n\x07PBParty\x12\x1d\n\x08merchant\x18\x01 \x01(\x0b\x32\x0b.PBMerchant\x12\x14\n\x0cmember_limit\x18\x02 \x01(\x05\x12\x1d\n\x08location\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\x12\x12\n\nphoto_list\x18\x08 \x03(\t\x1a\xad\x01\n\tPBTraffic\x12\x14\n\x0cmember_limit\x18\x01 \x01(\x05\x12\x19\n\x04\x66rom\x18\x02 \x01(\x0b\x32\x0b.PBLocation\x12\x17\n\x02to\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\x1a\xcc\x01\n\nPBShopping\x12\x1d\n\x08merchant\x18\x01 \x01(\x0b\x32\x0b.PBMerchant\x12\x14\n\x0cmember_limit\x18\x02 \x01(\x05\x12\x1d\n\x08location\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\x12\x12\n\nphoto_list\x18\x08 \x03(\t*6\n\x0ePBActivityType\x12\t\n\x05PARTY\x10\x01\x12\x0b\n\x07TRAFFIC\x10\x02\x12\x0c\n\x08SHOPPING\x10\x03')
-
 _PBACTIVITYTYPE = descriptor.EnumDescriptor(
   name='PBActivityType',
   full_name='PBActivityType',
-  filename=None,
-  file=DESCRIPTOR,
+  filename='PBActivityType',
   values=[
     descriptor.EnumValueDescriptor(
       name='PARTY', index=0, number=1,
@@ -33,638 +24,765 @@ _PBACTIVITYTYPE = descriptor.EnumDescriptor(
       options=None,
       type=None),
   ],
-  containing_type=None,
   options=None,
-  serialized_start=1370,
-  serialized_end=1424,
+)
+
+
+_PBACTIONTYPE = descriptor.EnumDescriptor(
+  name='PBActionType',
+  full_name='PBActionType',
+  filename='PBActionType',
+  values=[
+    descriptor.EnumValueDescriptor(
+      name='ACTIVITY', index=0, number=1,
+      options=None,
+      type=None),
+    descriptor.EnumValueDescriptor(
+      name='SHARE', index=1, number=2,
+      options=None,
+      type=None),
+    descriptor.EnumValueDescriptor(
+      name='JOIN', index=2, number=3,
+      options=None,
+      type=None),
+  ],
+  options=None,
+)
+
+
+_PBACTIONSTATUS = descriptor.EnumDescriptor(
+  name='PBActionStatus',
+  full_name='PBActionStatus',
+  filename='PBActionStatus',
+  values=[
+    descriptor.EnumValueDescriptor(
+      name='NORMAL', index=0, number=1,
+      options=None,
+      type=None),
+    descriptor.EnumValueDescriptor(
+      name='DELETED', index=1, number=2,
+      options=None,
+      type=None),
+    descriptor.EnumValueDescriptor(
+      name='MARK', index=2, number=3,
+      options=None,
+      type=None),
+  ],
+  options=None,
 )
 
 
 PARTY = 1
 TRAFFIC = 2
 SHOPPING = 3
+ACTIVITY = 1
+SHARE = 2
+JOIN = 3
+NORMAL = 1
+DELETED = 2
+MARK = 3
 
 
 
-_ALBUM = descriptor.Descriptor(
-  name='Album',
-  full_name='Album',
-  filename=None,
-  file=DESCRIPTOR,
+_PBALBUM = descriptor.Descriptor(
+  name='PBAlbum',
+  full_name='PBAlbum',
+  filename='action.proto',
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='album_id', full_name='Album.album_id', index=0,
+      name='album_id', full_name='PBAlbum.album_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='uid', full_name='Album.uid', index=1,
+      name='uid', full_name='PBAlbum.uid', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='name', full_name='Album.name', index=2,
+      name='name', full_name='PBAlbum.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='image_list', full_name='Album.image_list', index=3,
+      name='image_list', full_name='PBAlbum.image_list', index=3,
       number=4, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[],  # TODO(robinson): Implement.
   enum_types=[
   ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=29,
-  serialized_end=101,
-)
+  options=None)
 
 
 _PBCOMMENT = descriptor.Descriptor(
   name='PBComment',
   full_name='PBComment',
-  filename=None,
-  file=DESCRIPTOR,
+  filename='action.proto',
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
       name='comment_id', full_name='PBComment.comment_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='string_id', full_name='PBComment.string_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='uid', full_name='PBComment.uid', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='c_date', full_name='PBComment.c_date', index=3,
       number=4, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='content', full_name='PBComment.content', index=4,
       number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='star', full_name='PBComment.star', index=5,
       number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='is_reply', full_name='PBComment.is_reply', index=6,
       number=7, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='reply_id', full_name='PBComment.reply_id', index=7,
       number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='digest', full_name='PBComment.digest', index=8,
       number=9, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[],  # TODO(robinson): Implement.
   enum_types=[
   ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=104,
-  serialized_end=266,
-)
+  options=None)
 
 
 _PBPROMOTION = descriptor.Descriptor(
   name='PBPromotion',
   full_name='PBPromotion',
-  filename=None,
-  file=DESCRIPTOR,
+  filename='action.proto',
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
       name='start_date', full_name='PBPromotion.start_date', index=0,
       number=1, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='end_date', full_name='PBPromotion.end_date', index=1,
       number=2, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='content', full_name='PBPromotion.content', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[],  # TODO(robinson): Implement.
   enum_types=[
   ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=268,
-  serialized_end=336,
-)
+  options=None)
 
 
 _PBMERCHANT = descriptor.Descriptor(
   name='PBMerchant',
   full_name='PBMerchant',
-  filename=None,
-  file=DESCRIPTOR,
+  filename='action.proto',
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
       name='merchant_id', full_name='PBMerchant.merchant_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='type', full_name='PBMerchant.type', index=1,
       number=2, type=5, cpp_type=1, label=1,
-      has_default_value=True, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='aibang_id', full_name='PBMerchant.aibang_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='location', full_name='PBMerchant.location', index=3,
       number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='tel_list', full_name='PBMerchant.tel_list', index=4,
       number=5, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='promotions', full_name='PBMerchant.promotions', index=5,
       number=6, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[],  # TODO(robinson): Implement.
   enum_types=[
   ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=339,
-  serialized_end=491,
-)
+  options=None)
 
 
-_PBACTIVITY_PBPARTY = descriptor.Descriptor(
+_PBPARTY = descriptor.Descriptor(
   name='PBParty',
-  full_name='PBActivity.PBParty',
-  filename=None,
-  file=DESCRIPTOR,
+  full_name='PBParty',
+  filename='action.proto',
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='merchant', full_name='PBActivity.PBParty.merchant', index=0,
+      name='merchant', full_name='PBParty.merchant', index=0,
       number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='member_limit', full_name='PBActivity.PBParty.member_limit', index=1,
+      name='member_limit', full_name='PBParty.member_limit', index=1,
       number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='location', full_name='PBActivity.PBParty.location', index=2,
+      name='location', full_name='PBParty.location', index=2,
       number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='contact', full_name='PBActivity.PBParty.contact', index=3,
+      name='contact', full_name='PBParty.contact', index=3,
       number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='join_timeline', full_name='PBActivity.PBParty.join_timeline', index=4,
+      name='join_timeline', full_name='PBParty.join_timeline', index=4,
       number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='hold_time', full_name='PBActivity.PBParty.hold_time', index=5,
+      name='hold_time', full_name='PBParty.hold_time', index=5,
       number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='content', full_name='PBActivity.PBParty.content', index=6,
+      name='content', full_name='PBParty.content', index=6,
       number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='photo_list', full_name='PBActivity.PBParty.photo_list', index=7,
+      name='photo_list', full_name='PBParty.photo_list', index=7,
       number=8, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[],  # TODO(robinson): Implement.
   enum_types=[
   ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=784,
-  serialized_end=985,
-)
+  options=None)
 
-_PBACTIVITY_PBTRAFFIC = descriptor.Descriptor(
+
+_PBTRAFFIC = descriptor.Descriptor(
   name='PBTraffic',
-  full_name='PBActivity.PBTraffic',
-  filename=None,
-  file=DESCRIPTOR,
+  full_name='PBTraffic',
+  filename='action.proto',
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='member_limit', full_name='PBActivity.PBTraffic.member_limit', index=0,
+      name='member_limit', full_name='PBTraffic.member_limit', index=0,
       number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='from', full_name='PBActivity.PBTraffic.from', index=1,
+      name='from', full_name='PBTraffic.from', index=1,
       number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='to', full_name='PBActivity.PBTraffic.to', index=2,
+      name='to', full_name='PBTraffic.to', index=2,
       number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='contact', full_name='PBActivity.PBTraffic.contact', index=3,
+      name='contact', full_name='PBTraffic.contact', index=3,
       number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='join_timeline', full_name='PBActivity.PBTraffic.join_timeline', index=4,
+      name='join_timeline', full_name='PBTraffic.join_timeline', index=4,
       number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='hold_time', full_name='PBActivity.PBTraffic.hold_time', index=5,
+      name='hold_time', full_name='PBTraffic.hold_time', index=5,
       number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='content', full_name='PBActivity.PBTraffic.content', index=6,
+      name='content', full_name='PBTraffic.content', index=6,
       number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[],  # TODO(robinson): Implement.
   enum_types=[
   ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=988,
-  serialized_end=1161,
-)
+  options=None)
 
-_PBACTIVITY_PBSHOPPING = descriptor.Descriptor(
+
+_PBSHOPPING = descriptor.Descriptor(
   name='PBShopping',
-  full_name='PBActivity.PBShopping',
-  filename=None,
-  file=DESCRIPTOR,
+  full_name='PBShopping',
+  filename='action.proto',
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='merchant', full_name='PBActivity.PBShopping.merchant', index=0,
+      name='merchant', full_name='PBShopping.merchant', index=0,
       number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='member_limit', full_name='PBActivity.PBShopping.member_limit', index=1,
+      name='member_limit', full_name='PBShopping.member_limit', index=1,
       number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='location', full_name='PBActivity.PBShopping.location', index=2,
+      name='location', full_name='PBShopping.location', index=2,
       number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='contact', full_name='PBActivity.PBShopping.contact', index=3,
+      name='contact', full_name='PBShopping.contact', index=3,
       number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='join_timeline', full_name='PBActivity.PBShopping.join_timeline', index=4,
+      name='join_timeline', full_name='PBShopping.join_timeline', index=4,
       number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='hold_time', full_name='PBActivity.PBShopping.hold_time', index=5,
+      name='hold_time', full_name='PBShopping.hold_time', index=5,
       number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='content', full_name='PBActivity.PBShopping.content', index=6,
+      name='content', full_name='PBShopping.content', index=6,
       number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='photo_list', full_name='PBActivity.PBShopping.photo_list', index=7,
+      name='photo_list', full_name='PBShopping.photo_list', index=7,
       number=8, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[],  # TODO(robinson): Implement.
   enum_types=[
   ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=1164,
-  serialized_end=1368,
-)
+  options=None)
+
 
 _PBACTIVITY = descriptor.Descriptor(
   name='PBActivity',
   full_name='PBActivity',
-  filename=None,
-  file=DESCRIPTOR,
+  filename='action.proto',
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
       name='type', full_name='PBActivity.type', index=0,
       number=1, type=14, cpp_type=8, label=2,
-      has_default_value=False, default_value=1,
+      default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='c_date', full_name='PBActivity.c_date', index=1,
       number=2, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='uid', full_name='PBActivity.uid', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='party', full_name='PBActivity.party', index=3,
       number=10, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='traffic', full_name='PBActivity.traffic', index=4,
       number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='shopping', full_name='PBActivity.shopping', index=5,
       number=12, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='comment_count', full_name='PBActivity.comment_count', index=6,
       number=50, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='share_count', full_name='PBActivity.share_count', index=7,
       number=51, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='interested_count', full_name='PBActivity.interested_count', index=8,
       number=52, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='participant_count', full_name='PBActivity.participant_count', index=9,
       number=53, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[_PBACTIVITY_PBPARTY, _PBACTIVITY_PBTRAFFIC, _PBACTIVITY_PBSHOPPING, ],
+  nested_types=[],  # TODO(robinson): Implement.
   enum_types=[
   ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=494,
-  serialized_end=1368,
-)
+  options=None)
 
-_PBMERCHANT.fields_by_name['location'].message_type = basic_pb2._PBLOCATION
+
+_PBJOIN = descriptor.Descriptor(
+  name='PBJoin',
+  full_name='PBJoin',
+  filename='action.proto',
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='activity_id', full_name='PBJoin.activity_id', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='activity', full_name='PBJoin.activity', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],  # TODO(robinson): Implement.
+  enum_types=[
+  ],
+  options=None)
+
+
+_PBSHARE = descriptor.Descriptor(
+  name='PBShare',
+  full_name='PBShare',
+  filename='action.proto',
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='activity_id', full_name='PBShare.activity_id', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='activity', full_name='PBShare.activity', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='comment', full_name='PBShare.comment', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],  # TODO(robinson): Implement.
+  enum_types=[
+  ],
+  options=None)
+
+
+_PBACTION = descriptor.Descriptor(
+  name='PBAction',
+  full_name='PBAction',
+  filename='action.proto',
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='action_id', full_name='PBAction.action_id', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='type', full_name='PBAction.type', index=1,
+      number=2, type=14, cpp_type=8, label=2,
+      default_value=1,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='c_date', full_name='PBAction.c_date', index=2,
+      number=3, type=5, cpp_type=1, label=2,
+      default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='user', full_name='PBAction.user', index=3,
+      number=4, type=11, cpp_type=10, label=2,
+      default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='activity', full_name='PBAction.activity', index=4,
+      number=20, type=11, cpp_type=10, label=1,
+      default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='share', full_name='PBAction.share', index=5,
+      number=21, type=11, cpp_type=10, label=1,
+      default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='join', full_name='PBAction.join', index=6,
+      number=22, type=11, cpp_type=10, label=1,
+      default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],  # TODO(robinson): Implement.
+  enum_types=[
+  ],
+  options=None)
+
+import user_pb2
+
+_PBMERCHANT.fields_by_name['location'].message_type = user_pb2._PBLOCATION
 _PBMERCHANT.fields_by_name['promotions'].message_type = _PBPROMOTION
-_PBACTIVITY_PBPARTY.fields_by_name['merchant'].message_type = _PBMERCHANT
-_PBACTIVITY_PBPARTY.fields_by_name['location'].message_type = basic_pb2._PBLOCATION
-_PBACTIVITY_PBPARTY.fields_by_name['contact'].message_type = basic_pb2._PBCONTACT
-_PBACTIVITY_PBPARTY.containing_type = _PBACTIVITY;
-_PBACTIVITY_PBTRAFFIC.fields_by_name['from'].message_type = basic_pb2._PBLOCATION
-_PBACTIVITY_PBTRAFFIC.fields_by_name['to'].message_type = basic_pb2._PBLOCATION
-_PBACTIVITY_PBTRAFFIC.fields_by_name['contact'].message_type = basic_pb2._PBCONTACT
-_PBACTIVITY_PBTRAFFIC.containing_type = _PBACTIVITY;
-_PBACTIVITY_PBSHOPPING.fields_by_name['merchant'].message_type = _PBMERCHANT
-_PBACTIVITY_PBSHOPPING.fields_by_name['location'].message_type = basic_pb2._PBLOCATION
-_PBACTIVITY_PBSHOPPING.fields_by_name['contact'].message_type = basic_pb2._PBCONTACT
-_PBACTIVITY_PBSHOPPING.containing_type = _PBACTIVITY;
+_PBPARTY.fields_by_name['merchant'].message_type = _PBMERCHANT
+_PBPARTY.fields_by_name['location'].message_type = user_pb2._PBLOCATION
+_PBPARTY.fields_by_name['contact'].message_type = user_pb2._PBCONTACT
+_PBTRAFFIC.fields_by_name['from'].message_type = user_pb2._PBLOCATION
+_PBTRAFFIC.fields_by_name['to'].message_type = user_pb2._PBLOCATION
+_PBTRAFFIC.fields_by_name['contact'].message_type = user_pb2._PBCONTACT
+_PBSHOPPING.fields_by_name['merchant'].message_type = _PBMERCHANT
+_PBSHOPPING.fields_by_name['location'].message_type = user_pb2._PBLOCATION
+_PBSHOPPING.fields_by_name['contact'].message_type = user_pb2._PBCONTACT
 _PBACTIVITY.fields_by_name['type'].enum_type = _PBACTIVITYTYPE
-_PBACTIVITY.fields_by_name['party'].message_type = _PBACTIVITY_PBPARTY
-_PBACTIVITY.fields_by_name['traffic'].message_type = _PBACTIVITY_PBTRAFFIC
-_PBACTIVITY.fields_by_name['shopping'].message_type = _PBACTIVITY_PBSHOPPING
-DESCRIPTOR.message_types_by_name['Album'] = _ALBUM
-DESCRIPTOR.message_types_by_name['PBComment'] = _PBCOMMENT
-DESCRIPTOR.message_types_by_name['PBPromotion'] = _PBPROMOTION
-DESCRIPTOR.message_types_by_name['PBMerchant'] = _PBMERCHANT
-DESCRIPTOR.message_types_by_name['PBActivity'] = _PBACTIVITY
+_PBACTIVITY.fields_by_name['party'].message_type = _PBPARTY
+_PBACTIVITY.fields_by_name['traffic'].message_type = _PBTRAFFIC
+_PBACTIVITY.fields_by_name['shopping'].message_type = _PBSHOPPING
+_PBJOIN.fields_by_name['activity'].message_type = _PBACTIVITY
+_PBSHARE.fields_by_name['activity'].message_type = _PBACTIVITY
+_PBACTION.fields_by_name['type'].enum_type = _PBACTIONTYPE
+_PBACTION.fields_by_name['user'].message_type = user_pb2._PBUSERBASIC
+_PBACTION.fields_by_name['activity'].message_type = _PBACTIVITY
+_PBACTION.fields_by_name['share'].message_type = _PBSHARE
+_PBACTION.fields_by_name['join'].message_type = _PBJOIN
 
-class Album(message.Message):
+class PBAlbum(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _ALBUM
-  
-  # @@protoc_insertion_point(class_scope:Album)
+  DESCRIPTOR = _PBALBUM
 
 class PBComment(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _PBCOMMENT
-  
-  # @@protoc_insertion_point(class_scope:PBComment)
 
 class PBPromotion(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _PBPROMOTION
-  
-  # @@protoc_insertion_point(class_scope:PBPromotion)
 
 class PBMerchant(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _PBMERCHANT
-  
-  # @@protoc_insertion_point(class_scope:PBMerchant)
+
+class PBParty(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _PBPARTY
+
+class PBTraffic(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _PBTRAFFIC
+
+class PBShopping(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _PBSHOPPING
 
 class PBActivity(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-  
-  class PBParty(message.Message):
-    __metaclass__ = reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _PBACTIVITY_PBPARTY
-    
-    # @@protoc_insertion_point(class_scope:PBActivity.PBParty)
-  
-  class PBTraffic(message.Message):
-    __metaclass__ = reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _PBACTIVITY_PBTRAFFIC
-    
-    # @@protoc_insertion_point(class_scope:PBActivity.PBTraffic)
-  
-  class PBShopping(message.Message):
-    __metaclass__ = reflection.GeneratedProtocolMessageType
-    DESCRIPTOR = _PBACTIVITY_PBSHOPPING
-    
-    # @@protoc_insertion_point(class_scope:PBActivity.PBShopping)
   DESCRIPTOR = _PBACTIVITY
-  
-  # @@protoc_insertion_point(class_scope:PBActivity)
 
-# @@protoc_insertion_point(module_scope)
+class PBJoin(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _PBJOIN
+
+class PBShare(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _PBSHARE
+
+class PBAction(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _PBACTION
+
