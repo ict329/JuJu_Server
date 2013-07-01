@@ -11,7 +11,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='basic.proto',
   package='',
-  serialized_pb='\n\x0b\x62\x61sic.proto\"g\n\nPBLocation\x12\x14\n\x0c\x63ontury_code\x18\x01 \x02(\x05\x12\x10\n\x08province\x18\x02 \x02(\t\x12\x0c\n\x04\x63ity\x18\x03 \x02(\t\x12\x10\n\x08latitude\x18\x04 \x01(\x02\x12\x11\n\tlongitude\x18\x05 \x01(\x02\"k\n\tPBComment\x12\x0b\n\x03uid\x18\x01 \x02(\t\x12\x0e\n\x06\x63_date\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x0c\n\x04star\x18\x04 \x01(\x05\x12\x10\n\x08is_reply\x18\x05 \x01(\x08\x12\x10\n\x08reply_id\x18\x06 \x01(\t\"X\n\tPBContact\x12\x12\n\ntel_number\x18\x01 \x01(\t\x12\x11\n\tqq_number\x18\x02 \x01(\t\x12\x11\n\tsina_nick\x18\x03 \x01(\t\x12\x11\n\tweixin_id\x18\x04 \x01(\t\"\xb2\x01\n\x05PBSNS\x12\x12\n\ntel_number\x18\x01 \x01(\t\x12\x11\n\tqq_number\x18\x02 \x01(\t\x12\x13\n\x0bqq_weibo_id\x18\x03 \x01(\t\x12\x15\n\rqq_weibo_nick\x18\x04 \x01(\t\x12\x15\n\rsina_weibo_id\x18\x05 \x01(\t\x12\x17\n\x0fsina_weibo_nick\x18\x06 \x01(\t\x12\x11\n\trenren_id\x18\x07 \x01(\t\x12\x13\n\x0brenren_nick\x18\x08 \x01(\t\"j\n\x05PBLog\x12\x15\n\rlast_log_date\x18\x01 \x01(\x05\x12\x13\n\x0blast_log_ip\x18\x02 \x01(\x05\x12\x19\n\x11last_log_latitude\x18\x03 \x01(\x02\x12\x1a\n\x12last_log_longitude\x18\x04 \x01(\x02\"S\n\x0bPBRegistion\x12\x10\n\x08reg_date\x18\x01 \x02(\x05\x12\"\n\x08reg_type\x18\x02 \x01(\x0e\x32\n.PBRegType:\x04NICK\x12\x0e\n\x06reg_ip\x18\x03 \x01(\x05\"[\n\x08PBDevice\x12\x11\n\tdevice_id\x18\x01 \x02(\t\x12\x11\n\tdevice_os\x18\x02 \x02(\t\x12\x14\n\x0c\x64\x65vice_token\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65vice_name\x18\x04 \x01(\t\"\xc9\x01\n\x0bPBStatistic\x12\x11\n\tfan_count\x18\x01 \x01(\x05\x12\x14\n\x0c\x66ollow_count\x18\x02 \x01(\x05\x12\x13\n\x0bmy_activity\x18\x03 \x01(\x05\x12\x15\n\rnew_fan_count\x18\x14 \x01(\x05\x12\x18\n\x10new_follow_count\x18\x16 \x01(\x05\x12\x19\n\x11new_message_count\x18\x17 \x01(\x05\x12\x16\n\x0enew_feed_count\x18\x18 \x01(\x05\x12\x18\n\x10new_notice_count\x18\x19 \x01(\x05\"\xbb\x01\n\x0bPBUserBasic\x12\x0b\n\x03uid\x18\x01 \x02(\t\x12\x0c\n\x04nick\x18\x02 \x02(\t\x12\x1f\n\x04role\x18\x03 \x01(\x0e\x32\x0b.PBUserRole:\x04USER\x12\x0e\n\x06gender\x18\x04 \x01(\x08\x12\x0e\n\x06\x61vatar\x18\x05 \x01(\t\x12&\n\x06status\x18\x06 \x01(\x0e\x32\r.PBUserStatus:\x07OFFLINE\x12\x14\n\x0cintroduction\x18\x07 \x01(\t\x12\x12\n\nbirth_date\x18\x08 \x01(\x05\"\xc0\x01\n\x06PBUser\x12 \n\nbasic_info\x18\x01 \x02(\x0b\x32\x0c.PBUserBasic\x12\x1f\n\tregistion\x18\x02 \x01(\x0b\x32\x0c.PBRegistion\x12\x18\n\x08log_info\x18\x03 \x01(\x0b\x32\x06.PBLog\x12\x1e\n\x0b\x64\x65vice_info\x18\x04 \x01(\x0b\x32\t.PBDevice\x12\x18\n\x08sns_info\x18\x05 \x01(\x0b\x32\x06.PBSNS\x12\x1f\n\tstatistic\x18\x06 \x01(\x0b\x32\x0c.PBStatistic*4\n\tPBRegType\x12\x08\n\x04NICK\x10\x01\x12\x06\n\x02QQ\x10\x03\x12\n\n\x06RENREN\x10\x04\x12\t\n\x05\x45MAIL\x10\x05*,\n\nPBUserRole\x12\x08\n\x04USER\x10\x01\x12\t\n\x05\x41MDIN\x10\x02\x12\t\n\x05\x42LACK\x10\x03*3\n\x0cPBUserStatus\x12\x0b\n\x07OFFLINE\x10\x01\x12\n\n\x06ONLINE\x10\x02\x12\n\n\x06HIDDEN\x10\x03')
+  serialized_pb='\n\x0b\x62\x61sic.proto\"g\n\nPBLocation\x12\x14\n\x0c\x63ontury_code\x18\x01 \x02(\x05\x12\x10\n\x08province\x18\x02 \x02(\t\x12\x0c\n\x04\x63ity\x18\x03 \x02(\t\x12\x10\n\x08latitude\x18\x04 \x01(\x02\x12\x11\n\tlongitude\x18\x05 \x01(\x02\"X\n\tPBContact\x12\x12\n\ntel_number\x18\x01 \x01(\t\x12\x11\n\tqq_number\x18\x02 \x01(\t\x12\x11\n\tsina_nick\x18\x03 \x01(\t\x12\x11\n\tweixin_id\x18\x04 \x01(\t\"\xb2\x01\n\x05PBSNS\x12\x12\n\ntel_number\x18\x01 \x01(\t\x12\x11\n\tqq_number\x18\x02 \x01(\t\x12\x13\n\x0bqq_weibo_id\x18\x03 \x01(\t\x12\x15\n\rqq_weibo_nick\x18\x04 \x01(\t\x12\x15\n\rsina_weibo_id\x18\x05 \x01(\t\x12\x17\n\x0fsina_weibo_nick\x18\x06 \x01(\t\x12\x11\n\trenren_id\x18\x07 \x01(\t\x12\x13\n\x0brenren_nick\x18\x08 \x01(\t\"j\n\x05PBLog\x12\x15\n\rlast_log_date\x18\x01 \x01(\x05\x12\x13\n\x0blast_log_ip\x18\x02 \x01(\x05\x12\x19\n\x11last_log_latitude\x18\x03 \x01(\x02\x12\x1a\n\x12last_log_longitude\x18\x04 \x01(\x02\"S\n\x0bPBRegistion\x12\x10\n\x08reg_date\x18\x01 \x02(\x05\x12\"\n\x08reg_type\x18\x02 \x01(\x0e\x32\n.PBRegType:\x04NICK\x12\x0e\n\x06reg_ip\x18\x03 \x01(\x05\"[\n\x08PBDevice\x12\x11\n\tdevice_id\x18\x01 \x02(\t\x12\x11\n\tdevice_os\x18\x02 \x02(\t\x12\x14\n\x0c\x64\x65vice_token\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65vice_name\x18\x04 \x01(\t\"\xc9\x01\n\x0bPBStatistic\x12\x11\n\tfan_count\x18\x01 \x01(\x05\x12\x14\n\x0c\x66ollow_count\x18\x02 \x01(\x05\x12\x13\n\x0bmy_activity\x18\x03 \x01(\x05\x12\x15\n\rnew_fan_count\x18\x14 \x01(\x05\x12\x18\n\x10new_follow_count\x18\x16 \x01(\x05\x12\x19\n\x11new_message_count\x18\x17 \x01(\x05\x12\x16\n\x0enew_feed_count\x18\x18 \x01(\x05\x12\x18\n\x10new_notice_count\x18\x19 \x01(\x05\"\xbb\x01\n\x0bPBUserBasic\x12\x0b\n\x03uid\x18\x01 \x02(\t\x12\x0c\n\x04nick\x18\x02 \x02(\t\x12\x1f\n\x04role\x18\x03 \x01(\x0e\x32\x0b.PBUserRole:\x04USER\x12\x0e\n\x06gender\x18\x04 \x01(\x08\x12\x0e\n\x06\x61vatar\x18\x05 \x01(\t\x12&\n\x06status\x18\x06 \x01(\x0e\x32\r.PBUserStatus:\x07OFFLINE\x12\x14\n\x0cintroduction\x18\x07 \x01(\t\x12\x12\n\nbirth_date\x18\x08 \x01(\x05\"\xc0\x01\n\x06PBUser\x12 \n\nbasic_info\x18\x01 \x02(\x0b\x32\x0c.PBUserBasic\x12\x1f\n\tregistion\x18\x02 \x01(\x0b\x32\x0c.PBRegistion\x12\x18\n\x08log_info\x18\x03 \x01(\x0b\x32\x06.PBLog\x12\x1e\n\x0b\x64\x65vice_info\x18\x04 \x01(\x0b\x32\t.PBDevice\x12\x18\n\x08sns_info\x18\x05 \x01(\x0b\x32\x06.PBSNS\x12\x1f\n\tstatistic\x18\x06 \x01(\x0b\x32\x0c.PBStatistic*4\n\tPBRegType\x12\x08\n\x04NICK\x10\x01\x12\x06\n\x02QQ\x10\x03\x12\n\n\x06RENREN\x10\x04\x12\t\n\x05\x45MAIL\x10\x05*,\n\nPBUserRole\x12\x08\n\x04USER\x10\x01\x12\t\n\x05\x41MDIN\x10\x02\x12\t\n\x05\x42LACK\x10\x03*3\n\x0cPBUserStatus\x12\x0b\n\x07OFFLINE\x10\x01\x12\n\n\x06ONLINE\x10\x02\x12\n\n\x06HIDDEN\x10\x03')
 
 _PBREGTYPE = descriptor.EnumDescriptor(
   name='PBRegType',
@@ -38,8 +38,8 @@ _PBREGTYPE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1375,
-  serialized_end=1427,
+  serialized_start=1266,
+  serialized_end=1318,
 )
 
 
@@ -64,8 +64,8 @@ _PBUSERROLE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1429,
-  serialized_end=1473,
+  serialized_start=1320,
+  serialized_end=1364,
 )
 
 
@@ -90,8 +90,8 @@ _PBUSERSTATUS = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1475,
-  serialized_end=1526,
+  serialized_start=1366,
+  serialized_end=1417,
 )
 
 
@@ -164,69 +164,6 @@ _PBLOCATION = descriptor.Descriptor(
 )
 
 
-_PBCOMMENT = descriptor.Descriptor(
-  name='PBComment',
-  full_name='PBComment',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    descriptor.FieldDescriptor(
-      name='uid', full_name='PBComment.uid', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='c_date', full_name='PBComment.c_date', index=1,
-      number=2, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='content', full_name='PBComment.content', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='star', full_name='PBComment.star', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='is_reply', full_name='PBComment.is_reply', index=4,
-      number=5, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='reply_id', full_name='PBComment.reply_id', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  serialized_start=120,
-  serialized_end=227,
-)
-
-
 _PBCONTACT = descriptor.Descriptor(
   name='PBContact',
   full_name='PBContact',
@@ -271,8 +208,8 @@ _PBCONTACT = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=229,
-  serialized_end=317,
+  serialized_start=120,
+  serialized_end=208,
 )
 
 
@@ -348,8 +285,8 @@ _PBSNS = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=320,
-  serialized_end=498,
+  serialized_start=211,
+  serialized_end=389,
 )
 
 
@@ -397,8 +334,8 @@ _PBLOG = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=500,
-  serialized_end=606,
+  serialized_start=391,
+  serialized_end=497,
 )
 
 
@@ -439,8 +376,8 @@ _PBREGISTION = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=608,
-  serialized_end=691,
+  serialized_start=499,
+  serialized_end=582,
 )
 
 
@@ -488,8 +425,8 @@ _PBDEVICE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=693,
-  serialized_end=784,
+  serialized_start=584,
+  serialized_end=675,
 )
 
 
@@ -565,8 +502,8 @@ _PBSTATISTIC = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=787,
-  serialized_end=988,
+  serialized_start=678,
+  serialized_end=879,
 )
 
 
@@ -642,8 +579,8 @@ _PBUSERBASIC = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=991,
-  serialized_end=1178,
+  serialized_start=882,
+  serialized_end=1069,
 )
 
 
@@ -705,8 +642,8 @@ _PBUSER = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1181,
-  serialized_end=1373,
+  serialized_start=1072,
+  serialized_end=1264,
 )
 
 _PBREGISTION.fields_by_name['reg_type'].enum_type = _PBREGTYPE
@@ -719,7 +656,6 @@ _PBUSER.fields_by_name['device_info'].message_type = _PBDEVICE
 _PBUSER.fields_by_name['sns_info'].message_type = _PBSNS
 _PBUSER.fields_by_name['statistic'].message_type = _PBSTATISTIC
 DESCRIPTOR.message_types_by_name['PBLocation'] = _PBLOCATION
-DESCRIPTOR.message_types_by_name['PBComment'] = _PBCOMMENT
 DESCRIPTOR.message_types_by_name['PBContact'] = _PBCONTACT
 DESCRIPTOR.message_types_by_name['PBSNS'] = _PBSNS
 DESCRIPTOR.message_types_by_name['PBLog'] = _PBLOG
@@ -734,12 +670,6 @@ class PBLocation(message.Message):
   DESCRIPTOR = _PBLOCATION
   
   # @@protoc_insertion_point(class_scope:PBLocation)
-
-class PBComment(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _PBCOMMENT
-  
-  # @@protoc_insertion_point(class_scope:PBComment)
 
 class PBContact(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType

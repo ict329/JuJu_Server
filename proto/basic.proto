@@ -7,14 +7,6 @@ message PBLocation{
     optional float longitude = 5;
 }
 
-message PBComment {
-    required string uid = 1;
-    required int32 c_date = 2;
-    optional string content = 3;
-    optional int32 star = 4;
-    optional bool is_reply = 5;
-    optional string reply_id = 6;
-}
 
 //May be useless
 message PBContact {
