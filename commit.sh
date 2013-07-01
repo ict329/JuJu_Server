@@ -15,8 +15,6 @@ git add commit.sh
 echo ''
 
 echo $line' auto checkout unuse files (*xcbkptlist *xcuserstate *DS_Store)  '$line
-git checkout *xcbkptlist 
-git checkout *xcuserstate 
 git checkout *DS_Store
 echo ''
 
