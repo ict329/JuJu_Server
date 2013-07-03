@@ -12,7 +12,7 @@ import basic_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='user.proto',
   package='',
-  serialized_pb='\n\nuser.proto\x1a\x0b\x62\x61sic.proto\"\xb2\x01\n\x05PBSNS\x12\x12\n\ntel_number\x18\x01 \x01(\t\x12\x11\n\tqq_number\x18\x02 \x01(\t\x12\x13\n\x0bqq_weibo_id\x18\x03 \x01(\t\x12\x15\n\rqq_weibo_nick\x18\x04 \x01(\t\x12\x15\n\rsina_weibo_id\x18\x05 \x01(\t\x12\x17\n\x0fsina_weibo_nick\x18\x06 \x01(\t\x12\x11\n\trenren_id\x18\x07 \x01(\t\x12\x13\n\x0brenren_nick\x18\x08 \x01(\t\"j\n\x05PBLog\x12\x15\n\rlast_log_date\x18\x01 \x01(\x05\x12\x13\n\x0blast_log_ip\x18\x02 \x01(\x05\x12\x19\n\x11last_log_latitude\x18\x03 \x01(\x02\x12\x1a\n\x12last_log_longitude\x18\x04 \x01(\x02\"S\n\x0bPBRegistion\x12\x10\n\x08reg_date\x18\x01 \x02(\x05\x12\"\n\x08reg_type\x18\x02 \x01(\x0e\x32\n.PBRegType:\x04NICK\x12\x0e\n\x06reg_ip\x18\x03 \x01(\x05\"[\n\x08PBDevice\x12\x11\n\tdevice_id\x18\x01 \x02(\t\x12\x11\n\tdevice_os\x18\x02 \x02(\t\x12\x14\n\x0c\x64\x65vice_token\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65vice_name\x18\x04 \x01(\t\"\xc9\x01\n\x0bPBStatistic\x12\x11\n\tfan_count\x18\x01 \x01(\x05\x12\x14\n\x0c\x66ollow_count\x18\x02 \x01(\x05\x12\x13\n\x0bmy_activity\x18\x03 \x01(\x05\x12\x15\n\rnew_fan_count\x18\x14 \x01(\x05\x12\x18\n\x10new_follow_count\x18\x16 \x01(\x05\x12\x19\n\x11new_message_count\x18\x17 \x01(\x05\x12\x16\n\x0enew_feed_count\x18\x18 \x01(\x05\x12\x18\n\x10new_notice_count\x18\x19 \x01(\x05\"\xe2\x01\n\x0bPBUserBasic\x12\x0b\n\x03uid\x18\x01 \x02(\t\x12\x0c\n\x04nick\x18\x02 \x02(\t\x12\x1f\n\x04role\x18\x03 \x01(\x0e\x32\x0b.PBUserRole:\x04USER\x12\x0e\n\x06gender\x18\x04 \x01(\x08\x12\x0e\n\x06\x61vatar\x18\x05 \x01(\t\x12&\n\x06status\x18\x06 \x01(\x0e\x32\r.PBUserStatus:\x07OFFLINE\x12\x14\n\x0cintroduction\x18\x07 \x01(\t\x12\x12\n\nbirth_date\x18\x08 \x01(\x05\x12\x12\n\nPBRelation\x18\x14 \x01(\x05\x12\x11\n\tnote_name\x18\x15 \x01(\t\"\xc0\x01\n\x06PBUser\x12 \n\nbasic_info\x18\x01 \x02(\x0b\x32\x0c.PBUserBasic\x12\x1f\n\tregistion\x18\x02 \x01(\x0b\x32\x0c.PBRegistion\x12\x18\n\x08log_info\x18\x03 \x01(\x0b\x32\x06.PBLog\x12\x1e\n\x0b\x64\x65vice_info\x18\x04 \x01(\x0b\x32\t.PBDevice\x12\x18\n\x08sns_info\x18\x05 \x01(\x0b\x32\x06.PBSNS\x12\x1f\n\tstatistic\x18\x06 \x01(\x0b\x32\x0c.PBStatistic*8\n\nPBRelation\x12\n\n\x06\x46OLLOW\x10\x01\x12\x07\n\x03\x46\x41N\x10\x02\x12\n\n\x06\x46RIEND\x10\x03\x12\t\n\x05\x42LACK\x10\x04*4\n\tPBRegType\x12\x08\n\x04NICK\x10\x01\x12\x06\n\x02QQ\x10\x03\x12\n\n\x06RENREN\x10\x04\x12\t\n\x05\x45MAIL\x10\x05*9\n\nPBUserRole\x12\x08\n\x04USER\x10\x01\x12\t\n\x05\x41MDIN\x10\x02\x12\x07\n\x03VIP\x10\x03\x12\r\n\tFORBIDDEN\x10\x04*3\n\x0cPBUserStatus\x12\x0b\n\x07OFFLINE\x10\x01\x12\n\n\x06ONLINE\x10\x02\x12\n\n\x06HIDDEN\x10\x03')
+  serialized_pb='\n\nuser.proto\x1a\x0b\x62\x61sic.proto\"\xb2\x01\n\x05PBSNS\x12\x12\n\ntel_number\x18\x01 \x01(\t\x12\x11\n\tqq_number\x18\x02 \x01(\t\x12\x13\n\x0bqq_weibo_id\x18\x03 \x01(\t\x12\x15\n\rqq_weibo_nick\x18\x04 \x01(\t\x12\x15\n\rsina_weibo_id\x18\x05 \x01(\t\x12\x17\n\x0fsina_weibo_nick\x18\x06 \x01(\t\x12\x11\n\trenren_id\x18\x07 \x01(\t\x12\x13\n\x0brenren_nick\x18\x08 \x01(\t\"j\n\x05PBLog\x12\x15\n\rlast_log_date\x18\x01 \x01(\x05\x12\x13\n\x0blast_log_ip\x18\x02 \x01(\x05\x12\x19\n\x11last_log_latitude\x18\x03 \x01(\x02\x12\x1a\n\x12last_log_longitude\x18\x04 \x01(\x02\"S\n\x0bPBRegistion\x12\x10\n\x08reg_date\x18\x01 \x02(\x05\x12\"\n\x08reg_type\x18\x02 \x01(\x0e\x32\n.PBRegType:\x04NICK\x12\x0e\n\x06reg_ip\x18\x03 \x01(\x05\"[\n\x08PBDevice\x12\x11\n\tdevice_id\x18\x01 \x02(\t\x12\x11\n\tdevice_os\x18\x02 \x02(\t\x12\x14\n\x0c\x64\x65vice_token\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65vice_name\x18\x04 \x01(\t\"\xc9\x01\n\x0bPBStatistic\x12\x11\n\tfan_count\x18\x01 \x01(\x05\x12\x14\n\x0c\x66ollow_count\x18\x02 \x01(\x05\x12\x13\n\x0bmy_activity\x18\x03 \x01(\x05\x12\x15\n\rnew_fan_count\x18\x14 \x01(\x05\x12\x18\n\x10new_follow_count\x18\x16 \x01(\x05\x12\x19\n\x11new_message_count\x18\x17 \x01(\x05\x12\x16\n\x0enew_feed_count\x18\x18 \x01(\x05\x12\x18\n\x10new_notice_count\x18\x19 \x01(\x05\"\xf0\x01\n\x0bPBUserBasic\x12\x0b\n\x03uid\x18\x01 \x02(\t\x12\x0c\n\x04nick\x18\x02 \x02(\t\x12\x1f\n\x04role\x18\x03 \x01(\x0e\x32\x0b.PBUserRole:\x04USER\x12\x0e\n\x06gender\x18\x04 \x01(\x08\x12\x0e\n\x06\x61vatar\x18\x05 \x01(\t\x12&\n\x06status\x18\x06 \x01(\x0e\x32\r.PBUserStatus:\x07OFFLINE\x12\x14\n\x0cintroduction\x18\x07 \x01(\t\x12\x12\n\nbirth_date\x18\x08 \x01(\x05\x12\x0c\n\x04tags\x18\t \x03(\t\x12\x12\n\nPBRelation\x18\x14 \x01(\x05\x12\x11\n\tnote_name\x18\x15 \x01(\t\"\xc0\x01\n\x06PBUser\x12 \n\nbasic_info\x18\x01 \x02(\x0b\x32\x0c.PBUserBasic\x12\x1f\n\tregistion\x18\x02 \x01(\x0b\x32\x0c.PBRegistion\x12\x18\n\x08log_info\x18\x03 \x01(\x0b\x32\x06.PBLog\x12\x1e\n\x0b\x64\x65vice_info\x18\x04 \x01(\x0b\x32\t.PBDevice\x12\x18\n\x08sns_info\x18\x05 \x01(\x0b\x32\x06.PBSNS\x12\x1f\n\tstatistic\x18\x06 \x01(\x0b\x32\x0c.PBStatistic*8\n\nPBRelation\x12\n\n\x06\x46OLLOW\x10\x01\x12\x07\n\x03\x46\x41N\x10\x02\x12\n\n\x06\x46RIEND\x10\x03\x12\t\n\x05\x42LACK\x10\x04*4\n\tPBRegType\x12\x08\n\x04NICK\x10\x01\x12\x06\n\x02QQ\x10\x03\x12\n\n\x06RENREN\x10\x04\x12\t\n\x05\x45MAIL\x10\x05*9\n\nPBUserRole\x12\x08\n\x04USER\x10\x01\x12\t\n\x05\x41MDIN\x10\x02\x12\x07\n\x03VIP\x10\x03\x12\r\n\tFORBIDDEN\x10\x04*3\n\x0cPBUserStatus\x12\x0b\n\x07OFFLINE\x10\x01\x12\n\n\x06ONLINE\x10\x02\x12\n\n\x06HIDDEN\x10\x03')
 
 _PBRELATION = descriptor.EnumDescriptor(
   name='PBRelation',
@@ -39,8 +39,8 @@ _PBRELATION = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1122,
-  serialized_end=1178,
+  serialized_start=1136,
+  serialized_end=1192,
 )
 
 
@@ -69,8 +69,8 @@ _PBREGTYPE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1180,
-  serialized_end=1232,
+  serialized_start=1194,
+  serialized_end=1246,
 )
 
 
@@ -99,8 +99,8 @@ _PBUSERROLE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1234,
-  serialized_end=1291,
+  serialized_start=1248,
+  serialized_end=1305,
 )
 
 
@@ -125,8 +125,8 @@ _PBUSERSTATUS = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1293,
-  serialized_end=1344,
+  serialized_start=1307,
+  serialized_end=1358,
 )
 
 
@@ -506,14 +506,21 @@ _PBUSERBASIC = descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='PBRelation', full_name='PBUserBasic.PBRelation', index=8,
+      name='tags', full_name='PBUserBasic.tags', index=8,
+      number=9, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='PBRelation', full_name='PBUserBasic.PBRelation', index=9,
       number=20, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='note_name', full_name='PBUserBasic.note_name', index=9,
+      name='note_name', full_name='PBUserBasic.note_name', index=10,
       number=21, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
@@ -529,7 +536,7 @@ _PBUSERBASIC = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=699,
-  serialized_end=925,
+  serialized_end=939,
 )
 
 
@@ -591,8 +598,8 @@ _PBUSER = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=928,
-  serialized_end=1120,
+  serialized_start=942,
+  serialized_end=1134,
 )
 
 _PBREGISTION.fields_by_name['reg_type'].enum_type = _PBREGTYPE

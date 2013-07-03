@@ -13,7 +13,7 @@ import user_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='action.proto',
   package='',
-  serialized_pb='\n\x0c\x61\x63tion.proto\x1a\x0b\x62\x61sic.proto\x1a\nuser.proto\"J\n\x07PBAlbum\x12\x10\n\x08\x61lbum_id\x18\x01 \x02(\t\x12\x0b\n\x03uid\x18\x02 \x02(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x12\n\nimage_list\x18\x04 \x03(\t\"\xa2\x01\n\tPBComment\x12\x12\n\ncomment_id\x18\x01 \x02(\t\x12\x11\n\tstring_id\x18\x02 \x02(\t\x12\x0b\n\x03uid\x18\x03 \x02(\t\x12\x0e\n\x06\x63_date\x18\x04 \x02(\x05\x12\x0f\n\x07\x63ontent\x18\x05 \x01(\t\x12\x0c\n\x04star\x18\x06 \x01(\x05\x12\x10\n\x08is_reply\x18\x07 \x01(\x08\x12\x10\n\x08reply_id\x18\x08 \x01(\t\x12\x0e\n\x06\x64igest\x18\t \x01(\t\"D\n\x0bPBPromotion\x12\x12\n\nstart_date\x18\x01 \x02(\x05\x12\x10\n\x08\x65nd_date\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ontent\x18\x03 \x02(\t\"\x98\x01\n\nPBMerchant\x12\x13\n\x0bmerchant_id\x18\x01 \x02(\t\x12\x0f\n\x04type\x18\x02 \x01(\x05:\x01\x30\x12\x11\n\taibang_id\x18\x03 \x01(\t\x12\x1d\n\x08location\x18\x04 \x01(\x0b\x32\x0b.PBLocation\x12\x10\n\x08tel_list\x18\x05 \x03(\t\x12 \n\npromotions\x18\x06 \x03(\x0b\x32\x0c.PBPromotion\"\xc9\x01\n\x07PBParty\x12\x1d\n\x08merchant\x18\x01 \x01(\x0b\x32\x0b.PBMerchant\x12\x14\n\x0cmember_limit\x18\x02 \x01(\x05\x12\x1d\n\x08location\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\x12\x12\n\nphoto_list\x18\x08 \x03(\t\"\xad\x01\n\tPBTraffic\x12\x14\n\x0cmember_limit\x18\x01 \x01(\x05\x12\x19\n\x04\x66rom\x18\x02 \x01(\x0b\x32\x0b.PBLocation\x12\x17\n\x02to\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\"\xcc\x01\n\nPBShopping\x12\x1d\n\x08merchant\x18\x01 \x01(\x0b\x32\x0b.PBMerchant\x12\x14\n\x0cmember_limit\x18\x02 \x01(\x05\x12\x1d\n\x08location\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\x12\x12\n\nphoto_list\x18\x08 \x03(\t\"\xfe\x01\n\nPBActivity\x12\x1d\n\x04type\x18\x01 \x02(\x0e\x32\x0f.PBActivityType\x12\x0e\n\x06\x63_date\x18\x02 \x02(\x05\x12\x0b\n\x03uid\x18\x03 \x02(\t\x12\x17\n\x05party\x18\n \x01(\x0b\x32\x08.PBParty\x12\x1b\n\x07traffic\x18\x0b \x01(\x0b\x32\n.PBTraffic\x12\x1d\n\x08shopping\x18\x0c \x01(\x0b\x32\x0b.PBShopping\x12\x15\n\rcomment_count\x18\x32 \x01(\x05\x12\x13\n\x0bshare_count\x18\x33 \x01(\x05\x12\x18\n\x10interested_count\x18\x34 \x01(\x05\x12\x19\n\x11participant_count\x18\x35 \x01(\x05\"<\n\x06PBJoin\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x02(\t\x12\x1d\n\x08\x61\x63tivity\x18\x02 \x01(\x0b\x32\x0b.PBActivity\"N\n\x07PBShare\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x02(\t\x12\x1d\n\x08\x61\x63tivity\x18\x02 \x01(\x0b\x32\x0b.PBActivity\x12\x0f\n\x07\x63omment\x18\x03 \x01(\t\"\xb5\x01\n\x08PBAction\x12\x11\n\taction_id\x18\x01 \x02(\t\x12\x1b\n\x04type\x18\x02 \x02(\x0e\x32\r.PBActionType\x12\x0e\n\x06\x63_date\x18\x03 \x02(\x05\x12\x1a\n\x04user\x18\x04 \x02(\x0b\x32\x0c.PBUserBasic\x12\x1d\n\x08\x61\x63tivity\x18\x14 \x01(\x0b\x32\x0b.PBActivity\x12\x17\n\x05share\x18\x15 \x01(\x0b\x32\x08.PBShare\x12\x15\n\x04join\x18\x16 \x01(\x0b\x32\x07.PBJoin*6\n\x0ePBActivityType\x12\t\n\x05PARTY\x10\x01\x12\x0b\n\x07TRAFFIC\x10\x02\x12\x0c\n\x08SHOPPING\x10\x03*1\n\x0cPBActionType\x12\x0c\n\x08\x41\x43TIVITY\x10\x01\x12\t\n\x05SHARE\x10\x02\x12\x08\n\x04JOIN\x10\x03*3\n\x0ePBActionStatus\x12\n\n\x06NORMAL\x10\x01\x12\x0b\n\x07\x44\x45LETED\x10\x02\x12\x08\n\x04MARK\x10\x03')
+  serialized_pb='\n\x0c\x61\x63tion.proto\x1a\x0b\x62\x61sic.proto\x1a\nuser.proto\"J\n\x07PBAlbum\x12\x10\n\x08\x61lbum_id\x18\x01 \x02(\t\x12\x0b\n\x03uid\x18\x02 \x02(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x12\n\nimage_list\x18\x04 \x03(\t\"\xa2\x01\n\tPBComment\x12\x12\n\ncomment_id\x18\x01 \x02(\t\x12\x11\n\tstring_id\x18\x02 \x02(\t\x12\x0b\n\x03uid\x18\x03 \x02(\t\x12\x0e\n\x06\x63_date\x18\x04 \x02(\x05\x12\x0f\n\x07\x63ontent\x18\x05 \x01(\t\x12\x0c\n\x04star\x18\x06 \x01(\x05\x12\x10\n\x08is_reply\x18\x07 \x01(\x08\x12\x10\n\x08reply_id\x18\x08 \x01(\t\x12\x0e\n\x06\x64igest\x18\t \x01(\t\"D\n\x0bPBPromotion\x12\x12\n\nstart_date\x18\x01 \x02(\x05\x12\x10\n\x08\x65nd_date\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ontent\x18\x03 \x02(\t\"\xb9\x02\n\nPBMerchant\x12\x13\n\x0bmerchant_id\x18\x01 \x02(\t\x12\x11\n\taibang_id\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0e\n\x06\x63ounty\x18\x04 \x01(\t\x12\x0c\n\x04\x61\x64\x64r\x18\x05 \x01(\t\x12\x0b\n\x03tel\x18\x06 \x01(\t\x12\x0c\n\x04\x63\x61te\x18\x08 \x01(\t\x12\x0c\n\x04rate\x18\t \x01(\t\x12\x0c\n\x04\x63ost\x18\n \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\x0b \x01(\t\x12\x0b\n\x03lng\x18\x0c \x01(\t\x12\x0b\n\x03lat\x18\r \x01(\t\x12\x11\n\twork_time\x18\x0e \x01(\t\x12\x10\n\x08site_url\x18\x0f \x01(\t\x12\x0f\n\x07web_url\x18\x10 \x01(\t\x12\x0f\n\x07wap_url\x18\x11 \x01(\t\x12\x0f\n\x07img_url\x18\x12 \x01(\t\x12 \n\npromotions\x18\x1e \x03(\x0b\x32\x0c.PBPromotion\"\xc9\x01\n\x07PBParty\x12\x1d\n\x08merchant\x18\x01 \x01(\x0b\x32\x0b.PBMerchant\x12\x14\n\x0cmember_limit\x18\x02 \x01(\x05\x12\x1d\n\x08location\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\x12\x12\n\nphoto_list\x18\x08 \x03(\t\"\xad\x01\n\tPBTraffic\x12\x14\n\x0cmember_limit\x18\x01 \x01(\x05\x12\x19\n\x04\x66rom\x18\x02 \x01(\x0b\x32\x0b.PBLocation\x12\x17\n\x02to\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\"\xcc\x01\n\nPBShopping\x12\x1d\n\x08merchant\x18\x01 \x01(\x0b\x32\x0b.PBMerchant\x12\x14\n\x0cmember_limit\x18\x02 \x01(\x05\x12\x1d\n\x08location\x18\x03 \x01(\x0b\x32\x0b.PBLocation\x12\x1b\n\x07\x63ontact\x18\x04 \x01(\x0b\x32\n.PBContact\x12\x15\n\rjoin_timeline\x18\x05 \x01(\x05\x12\x11\n\thold_time\x18\x06 \x01(\x05\x12\x0f\n\x07\x63ontent\x18\x07 \x01(\t\x12\x12\n\nphoto_list\x18\x08 \x03(\t\"\xfe\x01\n\nPBActivity\x12\x1d\n\x04type\x18\x01 \x02(\x0e\x32\x0f.PBActivityType\x12\x0e\n\x06\x63_date\x18\x02 \x02(\x05\x12\x0b\n\x03uid\x18\x03 \x02(\t\x12\x17\n\x05party\x18\n \x01(\x0b\x32\x08.PBParty\x12\x1b\n\x07traffic\x18\x0b \x01(\x0b\x32\n.PBTraffic\x12\x1d\n\x08shopping\x18\x0c \x01(\x0b\x32\x0b.PBShopping\x12\x15\n\rcomment_count\x18\x32 \x01(\x05\x12\x13\n\x0bshare_count\x18\x33 \x01(\x05\x12\x18\n\x10interested_count\x18\x34 \x01(\x05\x12\x19\n\x11participant_count\x18\x35 \x01(\x05\"<\n\x06PBJoin\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x02(\t\x12\x1d\n\x08\x61\x63tivity\x18\x02 \x01(\x0b\x32\x0b.PBActivity\"N\n\x07PBShare\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x02(\t\x12\x1d\n\x08\x61\x63tivity\x18\x02 \x01(\x0b\x32\x0b.PBActivity\x12\x0f\n\x07\x63omment\x18\x03 \x01(\t\"\xb5\x01\n\x08PBAction\x12\x11\n\taction_id\x18\x01 \x02(\t\x12\x1b\n\x04type\x18\x02 \x02(\x0e\x32\r.PBActionType\x12\x0e\n\x06\x63_date\x18\x03 \x02(\x05\x12\x1a\n\x04user\x18\x04 \x02(\x0b\x32\x0c.PBUserBasic\x12\x1d\n\x08\x61\x63tivity\x18\x14 \x01(\x0b\x32\x0b.PBActivity\x12\x17\n\x05share\x18\x15 \x01(\x0b\x32\x08.PBShare\x12\x15\n\x04join\x18\x16 \x01(\x0b\x32\x07.PBJoin*6\n\x0ePBActivityType\x12\t\n\x05PARTY\x10\x01\x12\x0b\n\x07TRAFFIC\x10\x02\x12\x0c\n\x08SHOPPING\x10\x03*1\n\x0cPBActionType\x12\x0c\n\x08\x41\x43TIVITY\x10\x01\x12\t\n\x05SHARE\x10\x02\x12\x08\n\x04JOIN\x10\x03*3\n\x0ePBActionStatus\x12\n\n\x06NORMAL\x10\x01\x12\x0b\n\x07\x44\x45LETED\x10\x02\x12\x08\n\x04MARK\x10\x03')
 
 _PBACTIVITYTYPE = descriptor.EnumDescriptor(
   name='PBActivityType',
@@ -36,8 +36,8 @@ _PBACTIVITYTYPE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1677,
-  serialized_end=1731,
+  serialized_start=1838,
+  serialized_end=1892,
 )
 
 
@@ -62,8 +62,8 @@ _PBACTIONTYPE = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1733,
-  serialized_end=1782,
+  serialized_start=1894,
+  serialized_end=1943,
 )
 
 
@@ -88,8 +88,8 @@ _PBACTIONSTATUS = descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1784,
-  serialized_end=1835,
+  serialized_start=1945,
+  serialized_end=1996,
 )
 
 
@@ -295,36 +295,120 @@ _PBMERCHANT = descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='type', full_name='PBMerchant.type', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=True, default_value=0,
+      name='aibang_id', full_name='PBMerchant.aibang_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='aibang_id', full_name='PBMerchant.aibang_id', index=2,
+      name='name', full_name='PBMerchant.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='location', full_name='PBMerchant.location', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='county', full_name='PBMerchant.county', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='tel_list', full_name='PBMerchant.tel_list', index=4,
-      number=5, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      name='addr', full_name='PBMerchant.addr', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='promotions', full_name='PBMerchant.promotions', index=5,
-      number=6, type=11, cpp_type=10, label=3,
+      name='tel', full_name='PBMerchant.tel', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='cate', full_name='PBMerchant.cate', index=6,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='rate', full_name='PBMerchant.rate', index=7,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='cost', full_name='PBMerchant.cost', index=8,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='desc', full_name='PBMerchant.desc', index=9,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='lng', full_name='PBMerchant.lng', index=10,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='lat', full_name='PBMerchant.lat', index=11,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='work_time', full_name='PBMerchant.work_time', index=12,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='site_url', full_name='PBMerchant.site_url', index=13,
+      number=15, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='web_url', full_name='PBMerchant.web_url', index=14,
+      number=16, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='wap_url', full_name='PBMerchant.wap_url', index=15,
+      number=17, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='img_url', full_name='PBMerchant.img_url', index=16,
+      number=18, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='promotions', full_name='PBMerchant.promotions', index=17,
+      number=30, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -339,7 +423,7 @@ _PBMERCHANT = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=353,
-  serialized_end=505,
+  serialized_end=666,
 )
 
 
@@ -415,8 +499,8 @@ _PBPARTY = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=508,
-  serialized_end=709,
+  serialized_start=669,
+  serialized_end=870,
 )
 
 
@@ -485,8 +569,8 @@ _PBTRAFFIC = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=712,
-  serialized_end=885,
+  serialized_start=873,
+  serialized_end=1046,
 )
 
 
@@ -562,8 +646,8 @@ _PBSHOPPING = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=888,
-  serialized_end=1092,
+  serialized_start=1049,
+  serialized_end=1253,
 )
 
 
@@ -653,8 +737,8 @@ _PBACTIVITY = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1095,
-  serialized_end=1349,
+  serialized_start=1256,
+  serialized_end=1510,
 )
 
 
@@ -688,8 +772,8 @@ _PBJOIN = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1351,
-  serialized_end=1411,
+  serialized_start=1512,
+  serialized_end=1572,
 )
 
 
@@ -730,8 +814,8 @@ _PBSHARE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1413,
-  serialized_end=1491,
+  serialized_start=1574,
+  serialized_end=1652,
 )
 
 
@@ -800,11 +884,10 @@ _PBACTION = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1494,
-  serialized_end=1675,
+  serialized_start=1655,
+  serialized_end=1836,
 )
 
-_PBMERCHANT.fields_by_name['location'].message_type = basic_pb2._PBLOCATION
 _PBMERCHANT.fields_by_name['promotions'].message_type = _PBPROMOTION
 _PBPARTY.fields_by_name['merchant'].message_type = _PBMERCHANT
 _PBPARTY.fields_by_name['location'].message_type = basic_pb2._PBLOCATION

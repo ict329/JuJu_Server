@@ -53,11 +53,24 @@ message PBPromotion
 message PBMerchant
 {
     required string merchant_id = 1;
-    optional int32 type = 2 [default = 0];
-    optional string aibang_id = 3;
-    optional PBLocation location = 4;
-    repeated string tel_list = 5;
-    repeated PBPromotion promotions = 6;
+    optional string aibang_id = 2;
+    optional string name = 3;
+    optional string county = 4;
+    optional string addr = 5;
+    optional string tel = 6;
+    optional string cate = 8;
+    optional string rate = 9;
+    optional string cost = 10;
+    optional string desc = 11;
+    optional string lng = 12;
+    optional string lat = 13;
+    optional string work_time = 14;
+    optional string site_url = 15;
+    optional string web_url = 16;
+    optional string wap_url = 17;
+    optional string img_url = 18;
+    
+    repeated PBPromotion promotions = 30;
 }
 
 //Activity Content
