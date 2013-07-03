@@ -15,8 +15,27 @@ import message_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='response.proto',
   package='',
-  serialized_pb='\n\x0eresponse.proto\x1a\x0b\x62\x61sic.proto\x1a\nuser.proto\x1a\x0c\x61\x63tion.proto\x1a\rmessage.proto\"\x9c\x01\n\nPBResponse\x12\x1d\n\x08\x61\x63tivity\x18\x01 \x03(\x0b\x32\x0b.PBActivity\x12\x1b\n\x07\x63omment\x18\x02 \x03(\x0b\x32\n.PBComment\x12\x1a\n\x04user\x18\x03 \x03(\x0b\x32\x0c.PBUserBasic\x12\x19\n\x06\x61\x63tion\x18\x04 \x03(\x0b\x32\t.PBAction\x12\x1b\n\x07message\x18\x05 \x03(\x0b\x32\n.PBMessage')
+  serialized_pb='\n\x0eresponse.proto\x1a\x0b\x62\x61sic.proto\x1a\nuser.proto\x1a\x0c\x61\x63tion.proto\x1a\rmessage.proto\"\x8f\x02\n\nPBResponse\x12\x1b\n\x04\x63ode\x18\x01 \x02(\x0e\x32\r.PBResultCode\x12\x1b\n\x05users\x18\x02 \x03(\x0b\x32\x0c.PBUserBasic\x12\x1e\n\tactivitys\x18\x03 \x03(\x0b\x32\x0b.PBActivity\x12\x1c\n\x08\x63omments\x18\x04 \x03(\x0b\x32\n.PBComment\x12\x1a\n\x07\x61\x63tions\x18\x05 \x03(\x0b\x32\t.PBAction\x12\x1c\n\x08messages\x18\x06 \x03(\x0b\x32\n.PBMessage\x12\x15\n\x04user\x18\x32 \x01(\x0b\x32\x07.PBUser\x12\x19\n\x06\x61\x63tion\x18\x33 \x01(\x0b\x32\t.PBAction\x12\x1d\n\x08merchant\x18\x34 \x01(\x0b\x32\x0b.PBMerchant*\x1b\n\x0cPBResultCode\x12\x0b\n\x07SUCCESS\x10\x00')
 
+_PBRESULTCODE = descriptor.EnumDescriptor(
+  name='PBResultCode',
+  full_name='PBResultCode',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=0, number=0,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=346,
+  serialized_end=373,
+)
+
+
+SUCCESS = 0
 
 
 
@@ -28,37 +47,65 @@ _PBRESPONSE = descriptor.Descriptor(
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='activity', full_name='PBResponse.activity', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='code', full_name='PBResponse.code', index=0,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='comment', full_name='PBResponse.comment', index=1,
+      name='users', full_name='PBResponse.users', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='user', full_name='PBResponse.user', index=2,
+      name='activitys', full_name='PBResponse.activitys', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='action', full_name='PBResponse.action', index=3,
+      name='comments', full_name='PBResponse.comments', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='message', full_name='PBResponse.message', index=4,
+      name='actions', full_name='PBResponse.actions', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='messages', full_name='PBResponse.messages', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='user', full_name='PBResponse.user', index=6,
+      number=50, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='action', full_name='PBResponse.action', index=7,
+      number=51, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='merchant', full_name='PBResponse.merchant', index=8,
+      number=52, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -72,14 +119,18 @@ _PBRESPONSE = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=73,
-  serialized_end=229,
+  serialized_end=344,
 )
 
-_PBRESPONSE.fields_by_name['activity'].message_type = action_pb2._PBACTIVITY
-_PBRESPONSE.fields_by_name['comment'].message_type = action_pb2._PBCOMMENT
-_PBRESPONSE.fields_by_name['user'].message_type = user_pb2._PBUSERBASIC
+_PBRESPONSE.fields_by_name['code'].enum_type = _PBRESULTCODE
+_PBRESPONSE.fields_by_name['users'].message_type = user_pb2._PBUSERBASIC
+_PBRESPONSE.fields_by_name['activitys'].message_type = action_pb2._PBACTIVITY
+_PBRESPONSE.fields_by_name['comments'].message_type = action_pb2._PBCOMMENT
+_PBRESPONSE.fields_by_name['actions'].message_type = action_pb2._PBACTION
+_PBRESPONSE.fields_by_name['messages'].message_type = message_pb2._PBMESSAGE
+_PBRESPONSE.fields_by_name['user'].message_type = user_pb2._PBUSER
 _PBRESPONSE.fields_by_name['action'].message_type = action_pb2._PBACTION
-_PBRESPONSE.fields_by_name['message'].message_type = message_pb2._PBMESSAGE
+_PBRESPONSE.fields_by_name['merchant'].message_type = action_pb2._PBMERCHANT
 DESCRIPTOR.message_types_by_name['PBResponse'] = _PBRESPONSE
 
 class PBResponse(message.Message):

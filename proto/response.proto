@@ -3,12 +3,20 @@ import "user.proto";
 import "action.proto";
 import "message.proto";
 
+enum PBResultCode{
+   SUCCESS = 0; 
+}
 
 message PBResponse
 {
-    repeated PBActivity activity = 1;
-    repeated PBComment comment = 2;
-    repeated PBUserBasic user = 3;
-    repeated PBAction action = 4;
-    repeated PBMessage message = 5;
+    required PBResultCode code = 1;
+    repeated PBUserBasic users = 2;
+    repeated PBActivity activitys = 3;
+    repeated PBComment comments = 4;
+    repeated PBAction actions = 5;
+    repeated PBMessage messages = 6;
+
+    optional PBUser user = 50;
+    optional PBAction action = 51;
+    optional PBMerchant merchant = 52;
 }

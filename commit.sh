@@ -8,6 +8,7 @@ fi
 
 echo ""
 echo $line' add files (*.py *.sql *.zip)  '$line
+git add *
 git add *.jpg *.txt *.sh *.png
 git add *.zip .gitignore 
 git add *.sql *.py
