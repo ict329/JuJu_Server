@@ -1,7 +1,10 @@
-from flask import request
 import common.utils.str_util
 import common.utils.request_util
 import logging
+
+from flask import request
+from constant.service_constant import ARGS
+
 
 class JJService(object):
     

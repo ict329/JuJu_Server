@@ -1,7 +1,7 @@
 from flask import request
 from service.service import JJService
-#import common.utils.request_util
 from common.utils.request_util import get_value
+from constant.service_constant import ARGS
 
 class RegisterService(JJService):
     def __init__(self, request):
@@ -12,8 +12,8 @@ class RegisterService(JJService):
     def _parse_request(self):
         get = get_value
 
-        self.uname = get(self.request, 'uname')
-        self.password = get(self.request, 'password')
+        self.uname = get(self.request, ARGS.P_UNAME)
+        self.password = get(self.request, ARGS.P_PASSWORD)
 
          
     def _check_parameters(self):
@@ -27,7 +27,8 @@ class RegisterService(JJService):
         return True
 
     def _handle_data(self):
-        return self.__class__.__name__ 
+#        return self.__class__.__name__ 
+        return self.request.remote_addr
 
     def _handle_error(self):
         return self.__class__.__name__ 
