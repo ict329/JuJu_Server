@@ -335,7 +335,7 @@ Action (may be say or activity)
                
 /////////////////////////////////////////////////////////
 
-        Delete Comment List
+        Delete Comment 
             Request:
                 comment_id
                 uid

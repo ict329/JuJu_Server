@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import request
 from service.handler import handle_request
-from service.user_service.register_service import RegisterService
+from service.user.register import RegisterService
 
 app = Flask(__name__)
 app.debug = True
