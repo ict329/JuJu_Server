@@ -1,7 +1,7 @@
 from flask import request
 from service.service import JJService
 
-class BlackUserService(JJService):
+class CreateActivityService(JJService):
     def __init__(self, request):
         self.code = 0
         self.data = None
