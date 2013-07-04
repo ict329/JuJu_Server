@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 from service.user.register import RegisterService
+from service.user.template import TemplateService
 
 app = Flask(__name__)
 app.debug = True
@@ -11,7 +12,7 @@ def hello_world():
 
 @app.route('/register', methods = ['GET','POST'])
 def register():
-    return RegisterService(request).handle()
+    return TemplateService(request).handle()
 
 if __name__ == "__main__":
 	app.run(port=8888)
