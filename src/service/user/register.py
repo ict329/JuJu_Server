@@ -1,15 +1,9 @@
 from service.service import JJService 
 
 class RegisterService(JJService):
-    def __init__(self):
-        JJService.__init__(self)
+    def __init__(self, request):
+        JJService.__init__(self, request)
 
-    def parse_data(self, request):
-        flag = JJService.parse_data(self, request)
-        if flag:
-            return True
-
-        return False
     
-    def handle_data(self):
-        return self.__class__.__name__ 
+    def _handle_data(self):
+        return "HAHA" 

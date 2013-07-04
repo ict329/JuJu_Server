@@ -6,18 +6,30 @@ class JJService(object):
         self.code = 0
         self.data = None
         self.request = request
-    
-    def parse_request(self):
+   
+#protected methods, to be override
+    def _parse_request(self):
         return True
     
-    def handle_data(self):
+    def _check_parameters(self):
+        return True
+
+    def _authenticate(self):
+        return True
+
+    def _handle_data(self):
         return self.__class__.__name__ 
 
-    def check_parameters(self):
-        return True
+    def _handle_error(self):
+        return self.__class__.__name__ 
 
-    def authenticate(self):
-        return True
 
+#should not be override!!
     def handle(self):
+        self._parse_request()
 
+        if self._check_parameters() and self._authenticate():
+            return self._handle_data()
+        else:
+            return self._handle_error()
+ 
