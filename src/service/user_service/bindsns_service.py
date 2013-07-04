@@ -5,7 +5,11 @@ class BindSNSService(JJService):
         JJService.__init__(self)
 
     def parse_data(self, request):
-        return True
+        flag = JJService.parse_data(self, request)
+        if flag:
+            return True
+
+        return False
     
     def handle_data(self):
         return self.__class__.__name__ 
