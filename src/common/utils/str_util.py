@@ -17,3 +17,5 @@ def get_float_value(str_value, default_value):
 def isEmpty(str_value):
     return len(str_value.strip()) == 0 
 
+
+

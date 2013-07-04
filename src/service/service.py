@@ -1,11 +1,18 @@
 from flask import request
-from common.utils.strutil import *
+import common.utils.str_util
+import common.utils.request_util
+import logging
 
 class JJService(object):
+    
+    logging.basicConfig(level = logging.DEBUG)
+    log = logging.getLogger('Service')    
+
     def __init__(self, request):
         self.code = 0
         self.data = None
         self.request = request
+
    
 #protected methods, to be override
     def _parse_request(self):
@@ -32,4 +39,4 @@ class JJService(object):
             return self._handle_data()
         else:
             return self._handle_error()
- 
+
