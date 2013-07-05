@@ -75,6 +75,13 @@ message PBMerchant
     repeated PBPromotion promotions = 30;
 }
 
+
+enum PBPayType{
+    AA = 1;
+    FREE = 2;
+    OTHER = 10;
+}
+
 //Activity Content
 message PBParty{
     optional PBMerchant merchant = 1;
@@ -85,6 +92,7 @@ message PBParty{
     optional int32 hold_time = 6;
     optional string content = 7;
     repeated string photo_list = 8;
+    optional PBPayType pay_type = 9;
 }
 
 message PBTraffic{
@@ -95,6 +103,7 @@ message PBTraffic{
     optional int32 join_timeline = 5;
     optional int32 hold_time = 6;
     optional string content = 7;
+    optional PBPayType pay_type = 8;
 }
 
 message PBShopping{
@@ -106,6 +115,7 @@ message PBShopping{
     optional int32 hold_time = 6;
     optional string content = 7;
     repeated string photo_list = 8;
+    optional PBPayType pay_type = 9;
 }
 
 message PBActivity{

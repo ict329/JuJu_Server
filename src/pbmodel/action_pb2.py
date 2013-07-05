@@ -72,6 +72,28 @@ _PBACTIONSTATUS = descriptor.EnumDescriptor(
 )
 
 
+_PBPAYTYPE = descriptor.EnumDescriptor(
+  name='PBPayType',
+  full_name='PBPayType',
+  filename='PBPayType',
+  values=[
+    descriptor.EnumValueDescriptor(
+      name='AA', index=0, number=1,
+      options=None,
+      type=None),
+    descriptor.EnumValueDescriptor(
+      name='FREE', index=1, number=2,
+      options=None,
+      type=None),
+    descriptor.EnumValueDescriptor(
+      name='OTHER', index=2, number=10,
+      options=None,
+      type=None),
+  ],
+  options=None,
+)
+
+
 PARTY = 1
 TRAFFIC = 2
 SHOPPING = 3
@@ -81,6 +103,9 @@ JOIN = 3
 NORMAL = 1
 DELETED = 2
 MARK = 3
+AA = 1
+FREE = 2
+OTHER = 10
 
 
 
@@ -444,6 +469,13 @@ _PBPARTY = descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    descriptor.FieldDescriptor(
+      name='pay_type', full_name='PBParty.pay_type', index=8,
+      number=9, type=14, cpp_type=8, label=1,
+      default_value=1,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -505,6 +537,13 @@ _PBTRAFFIC = descriptor.Descriptor(
       name='content', full_name='PBTraffic.content', index=6,
       number=7, type=9, cpp_type=9, label=1,
       default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='pay_type', full_name='PBTraffic.pay_type', index=7,
+      number=8, type=14, cpp_type=8, label=1,
+      default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -576,6 +615,13 @@ _PBSHOPPING = descriptor.Descriptor(
       name='photo_list', full_name='PBShopping.photo_list', index=7,
       number=8, type=9, cpp_type=9, label=3,
       default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='pay_type', full_name='PBShopping.pay_type', index=8,
+      number=9, type=14, cpp_type=8, label=1,
+      default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -808,12 +854,15 @@ _PBMERCHANT.fields_by_name['promotions'].message_type = _PBPROMOTION
 _PBPARTY.fields_by_name['merchant'].message_type = _PBMERCHANT
 _PBPARTY.fields_by_name['location'].message_type = basic_pb2._PBLOCATION
 _PBPARTY.fields_by_name['contact'].message_type = basic_pb2._PBCONTACT
+_PBPARTY.fields_by_name['pay_type'].enum_type = _PBPAYTYPE
 _PBTRAFFIC.fields_by_name['from'].message_type = basic_pb2._PBLOCATION
 _PBTRAFFIC.fields_by_name['to'].message_type = basic_pb2._PBLOCATION
 _PBTRAFFIC.fields_by_name['contact'].message_type = basic_pb2._PBCONTACT
+_PBTRAFFIC.fields_by_name['pay_type'].enum_type = _PBPAYTYPE
 _PBSHOPPING.fields_by_name['merchant'].message_type = _PBMERCHANT
 _PBSHOPPING.fields_by_name['location'].message_type = basic_pb2._PBLOCATION
 _PBSHOPPING.fields_by_name['contact'].message_type = basic_pb2._PBCONTACT
+_PBSHOPPING.fields_by_name['pay_type'].enum_type = _PBPAYTYPE
 _PBACTIVITY.fields_by_name['type'].enum_type = _PBACTIVITYTYPE
 _PBACTIVITY.fields_by_name['party'].message_type = _PBPARTY
 _PBACTIVITY.fields_by_name['traffic'].message_type = _PBTRAFFIC
