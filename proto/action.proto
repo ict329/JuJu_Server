@@ -88,7 +88,7 @@ message PBParty{
     optional int32 member_limit = 2;
     optional PBLocation location = 3;
     optional PBContact contact = 4;
-    optional int32 join_timeline = 5;
+    optional int32 join_deadtime = 5;
     optional int32 hold_time = 6;
     optional string content = 7;
     repeated string photo_list = 8;
@@ -100,7 +100,7 @@ message PBTraffic{
     optional PBLocation from= 2;
     optional PBLocation to = 3;
     optional PBContact contact = 4;
-    optional int32 join_timeline = 5;
+    optional int32 join_deadtime = 5;
     optional int32 hold_time = 6;
     optional string content = 7;
     optional PBPayType pay_type = 8;
@@ -111,7 +111,7 @@ message PBShopping{
     optional int32 member_limit = 2;
     optional PBLocation location = 3;
     optional PBContact contact = 4;
-    optional int32 join_timeline = 5;
+    optional int32 join_deadtime = 5;
     optional int32 hold_time = 6;
     optional string content = 7;
     repeated string photo_list = 8;
